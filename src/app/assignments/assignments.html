@@ -1,0 +1,38 @@
+<p>Titre = {{titre}}</p>
+
+<form ngForm #assignmentForm class="form"
+      (submit)="onSubmit(nomAssignment.value)">
+   <mat-form-field>
+       Saisir le nom du devoir : <input matInput #nomAssignment>
+   </mat-form-field>
+   
+   <button
+       mat-stroked-button
+       color="primary"
+       [disabled]="!ajoutActive"
+    >
+    
+      Ajouter un devoir
+    </button>
+</form>
+
+<mat-list>
+  <mat-list-item 
+    *ngFor="let assignment of assignments" 
+    (click)="assignmentClique(assignment)">
+    
+    <h3 mat-subheader>{{ assignment.dateDeRendu | date:'dd/MM/yyyy' }}</h3>
+
+    <div>
+      <p appRendu *ngIf="assignment.rendu">
+        Devoir intitulé {{ assignment.nom }}, rendu le {{ assignment.dateDeRendu | date:'dd/MM/yyyy' }}.
+      </p>
+      
+      <p appNonsoumis *ngIf="!assignment.rendu">
+        Le devoir {{ assignment.nom }} (à rendre le {{ assignment.dateDeRendu | date:'dd/MM/yyyy' }}) n'a pas été rendu.
+      </p>
+    </div>
+  </mat-list-item>
+</mat-list>
+
+<app-assignment-detail [assignmentTransmis]="assignmentSelectionne"></app-assignment-detail>
