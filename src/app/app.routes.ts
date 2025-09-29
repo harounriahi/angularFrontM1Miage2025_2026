@@ -10,6 +10,7 @@ export const routes: Routes  = [
     path: 'home',
     component: Assignments  
   },
+  
   {
     path: 'details',
     component: AssignmentDetail  // supprimer un devoir
