@@ -1,0 +1,6 @@
+<div *ngIf="assignmentTransmis">
+    <p>Nom du devoir : {{ assignmentTransmis.nom }}</p>
+    <p>Date de rendu : {{ assignmentTransmis.dateDeRendu | date:'dd/MM/yyyy' }}</p>
+    <p>Status : {{ assignmentTransmis.rendu ? 'Rendu' : 'Non rendu' }}</p>
+  </div>
+  

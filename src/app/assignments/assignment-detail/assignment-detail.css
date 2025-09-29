@@ -1,0 +1,16 @@
+.assignment-card {
+    border-style: solid;
+    border-width: 2px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .rendu {
+    border-color: green;
+  }
+  
+  .non-rendu {
+    border-color: red;
+  }
+  

@@ -1,4 +1,55 @@
-<h1> Hello les M1 Miage !!!</h1>
-<h2>Prof : {{nomDuProf}}</h2>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<mat-toolbar color="primary">
+  <button mat-button (click)="opened = !opened"><mat-icon>menu</mat-icon></button>
+  <span>Assignment App</span>
+  <span class="example-spacer"></span>
+  <button mat-button routerLink="/home">Home</button>
+  <button mat-button routerLink="/liste">Assignments</button>
+  <button mat-button routerLink="/add">Add Assignment</button>
+</mat-toolbar>
 
-<app-assignments></app-assignments>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav [(opened)]="opened" mode="side">
+    <mat-nav-list>
+      <mat-list-item>
+        <a routerLink="/home" class="nav-link">
+          <mat-icon>home</mat-icon>
+          <span>Acceuil</span>
+        </a>
+      </mat-list-item>
+    
+      <mat-list-item>
+        <a routerLink="/liste" class="nav-link">
+          <mat-icon>list</mat-icon>
+          <span>Liste des devoirs</span>
+        </a>
+      </mat-list-item>
+    
+      <mat-list-item>
+        <a routerLink="/add" class="nav-link">
+          <mat-icon>add</mat-icon>
+          <span>Ajouter un devoir</span>
+        </a>
+      </mat-list-item>
+    
+      <mat-list-item>
+        <a routerLink="/modification" class="nav-link">
+          <mat-icon>edit</mat-icon>
+          <span>Modification d'un devoir</span>
+        </a>
+      </mat-list-item>
+    
+      <mat-list-item>
+        <a routerLink="/details" class="nav-link">
+          <mat-icon>delete</mat-icon>
+          <span>Suppression d'un devoir</span>
+        </a>
+      </mat-list-item>
+    </mat-nav-list>
+    
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,3 +1,134 @@
-h1 {
-    color:red
-}
+
+mat-toolbar {
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    background: linear-gradient(90deg, #5e35b1, #8e24aa); 
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+  
+  mat-toolbar button {
+    margin-left: 8px;
+    transition: background-color 0.2s, color 0.2s;
+    color: white;
+  }
+  
+  mat-toolbar button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffe082; 
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  
+
+  mat-sidenav {
+    width: 240px; 
+    background: linear-gradient(to bottom, #ffffff, #f3e5f5);
+    padding-top: 24px;
+    color: #4a148c;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  mat-sidenav mat-list-item {
+    height: auto;          
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    padding: 4px 16px;
+    border-radius: 8px;
+    margin: 4px 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: visible;       
+  }
+  
+  mat-sidenav mat-list-item:hover {
+    background-color: rgba(94, 53, 177, 0.1);
+    color: #5e35b1;
+    transform: translateX(4px);
+  }
+  
+  mat-sidenav a {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px; 
+    font-size: 15px;
+    white-space: normal;   
+    overflow: visible;     
+  }
+  
+  mat-sidenav a span {
+    word-wrap: break-word;  
+  }
+  
+
+  mat-sidenav mat-icon {
+    font-size: 28px;     
+    line-height: 28px;
+    vertical-align: middle;
+    flex-shrink: 0;      
+    
+    color: #8e24aa;
+    transition: color 0.3s;
+  }
+  
+  mat-sidenav mat-list-item:hover mat-icon {
+    color: #5e35b1;
+  }
+  
+
+  a.active-link {
+    background-color: rgba(94, 53, 177, 0.15);
+    border-left: 4px solid #ffca28; 
+    padding-left: 12px;
+    font-weight: 600;
+  }
+  
+
+  mat-sidenav-content {
+    padding: 24px;
+    background: #f9f6fb; 
+    min-height: calc(100vh - 64px);
+  }
+  
+
+  button[mat-button], button[mat-stroked-button] {
+    transition: 0.3s;
+  }
+  
+  button[mat-button]:hover {
+    background-color: #ba68c8;
+    color: white;
+  }
+  
+  button[mat-stroked-button] {
+    border-color: #7e57c2;
+    color: #5e35b1;
+  }
+  
+  button[mat-stroked-button]:hover {
+    background-color: #7e57c2;
+    color: white;
+  }
+  
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    width: 100%;
+    color: inherit;
+    white-space: normal;   
+    overflow: visible;     
+  }
+  

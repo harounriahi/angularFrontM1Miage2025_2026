@@ -32,6 +32,10 @@ export class Assignments implements OnInit {
   // Pour le formulaire, une variable par champ
   nomAssignment = "";
   dateDeRendu!: Date;
+  deleteAssignment(assignment: Assignment) {
+    this.assignments = this.assignments.filter(a => a !== assignment);
+  }
+  
 
 
   constructor() { }

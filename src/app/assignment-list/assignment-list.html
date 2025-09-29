@@ -1,0 +1,12 @@
+<h1 class="page-title">Liste des Assignments:</h1>
+<mat-divider></mat-divider>
+
+<div *ngFor="let assignment of assignments" class="assignment-item">
+  <p *ngIf="assignment.rendu" style="color: green;" class="assignment rendu">
+     L'assignment "{{ assignment.nom }}" a été rendu le {{ assignment.dateDeRendu | date:'dd/MM/yyyy' }}
+  </p>
+  <p *ngIf="!assignment.rendu" style="color: red;" class="assignment non-rendu">
+     A RENDRE : "{{ assignment.nom }}" avant le {{ assignment.dateDeRendu | date:'dd/MM/yyyy' }}
+  </p>
+  <mat-divider></mat-divider>
+</div>

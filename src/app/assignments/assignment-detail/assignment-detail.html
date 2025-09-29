@@ -1,1 +1,10 @@
-<p>assignment-detail works! FILS !!!!</p>
+<mat-card [ngClass]="assignment.rendu ? 'rendu' : 'non-rendu'" class="assignment-card">
+    <h3>{{ assignment.nom }}</h3>
+    <p>Date de rendu: <span [ngStyle]="{'color': assignment.rendu ? 'green' : 'red'}">
+        {{ assignment.dateDeRendu | date:'shortDate' }}
+    </span></p>
+    <p>Statut: {{ assignment.rendu ? 'Rendu' : 'Non rendu' }}</p>
+  
+    <button mat-raised-button color="warn" (click)="onDelete()">DELETE</button>
+  </mat-card>
+  
