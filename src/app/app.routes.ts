@@ -5,27 +5,27 @@ import { AddAssignment } from './add-assignment/add-assignment';
 import { AssignmentDetail } from './assignments/assignment-detail/assignment-detail';
 import { ModificationDevoir } from './modification-devoir/modification-devoir';
 
-export const routes: Routes = [
+export const routes: Routes  = [
   {
     path: 'home',
-    component: Assignments  // formulaire + liste
+    component: Assignments  
   },
   {
     path: 'details',
-    component: AssignmentDetail  
+    component: AssignmentDetail  // supprimer un devoir
   },
   {
     path: 'modification',
-    component: ModificationDevoir  // juste le formulaire
+    component: ModificationDevoir  // mdoification d'un devoir
     
   },
   {
     path: 'liste',
-    component: AssignmentList  // juste la liste
+    component: AssignmentList  // liste des devoirs
   },
   {
     path: 'add',
-    component: AddAssignment  // juste le formulaire
+    component: AddAssignment  // ajouter un devoir
     
   },
   
