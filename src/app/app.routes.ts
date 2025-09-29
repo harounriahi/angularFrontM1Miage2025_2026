@@ -8,7 +8,7 @@ import { ModificationDevoir } from './modification-devoir/modification-devoir';
 export const routes: Routes = [
   {
     path: 'home',
-    component: Assignments  // formulaire + liste
+    component: Assignments  
   },
   {
     path: 'details',
@@ -16,16 +16,16 @@ export const routes: Routes = [
   },
   {
     path: 'modification',
-    component: ModificationDevoir  // juste le formulaire
+    component: ModificationDevoir  // mdoification d'un devoir
     
   },
   {
     path: 'liste',
-    component: AssignmentList  // juste la liste
+    component: AssignmentList  // liste des devoirs
   },
   {
     path: 'add',
-    component: AddAssignment  // juste le formulaire
+    component: AddAssignment  // ajouter un devoir
     
   },
   
